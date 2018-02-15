@@ -1,35 +1,678 @@
 /* Nav Bar ===============  */
+@import "compass/css3";
 
-ul {
-    list-style-type: none;
-    margin: 0;
+.navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: black;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+  background: darken(deepskyblue, 2%);
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
     padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
+  }
 
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
+  .navigation a {
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .navigation li:first-of-type a {
+    border-bottom: none;
+  }
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
+/* slide Animation =========== */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
-/* Title =================== */
+.navigation {
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1s ease-out 0s 1 slideInFromLeft;
 
-.App-header {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+  background: #333;
+  /* padding: 30px; */
+}
+
+/* Intro-container ======= */
+.intro-container {
+
+}
+
+
+/* Flex-Grid =================== */
+
+/* Explosive Text/Animations ====== */
+
+.word {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	height: 5vw;
+	width: 32vw;
+	transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+}
+
+.letter {
+	position: absolute;
+	top: left;
+	height: 5vw;
+	width: 4vw;
+}
+
+.letter .big-square {
+	transform: scale(0.75);
+	-ms-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	-webkit-transform: scale(0.75);
+	height: 1vw;
+	width: 1vw;
+}
+
+.letter .big-square .little-square {
+	background-color: black;
+	position: relative;
+	height: 0.5vw;
+	width: 0.5vw;
+}
+
+.letter .big-square .little-square.little-square-3,
+.letter .big-square .little-square.little-square-4 {
+	top: -1vw;
+	left: 0.5vw;
+}
+
+.letter .big-square {
+	position: relative;
+}
+
+.letter-E .big-square-6 {
+	top: -1vw;
+	left: +1vw;
+}
+.letter-E .big-square-7 {
+	top: -2vw;
+	left: +2vw;
+}
+.letter-E .big-square-8 {
+	top: -4vw;
+	left: +3vw;
+}
+.letter-E .big-square-9 {
+	top: -6vw;
+	left: +3vw;
+}
+.letter-E .big-square-10 {
+	top: -8vw;
+	left: +3vw;
+}
+.letter-E .big-square-11 {
+	top: -10vw;
+	left: +2vw;
+}
+.letter-E .big-square-12 {
+	top: -11vw;
+	left: +1vw;
+}
+
+.letter-I {
+	left: 5vw;
+}
+.letter-I .big-square-1,
+.letter-I .big-square-2,
+.letter-I .big-square-3,
+.letter-I .big-square-4,
+.letter-I .big-square-5 {
+	left: 1vw;
+}
+.letter-I .big-square-6 {
+	top: -1vw;
+}
+.letter-I .big-square-7 {
+	top: -2vw;
+	left: +2vw;
+}
+.letter-I .big-square-8 {
+	top: -7vw;
+}
+.letter-I .big-square-9 {
+	top: -8vw;
+	left: +2vw;
+}
+
+.letter-G {
+	left: 9vw;
+}
+.letter-G .big-square-1 {
+	left: 1vw;
+}
+.letter-G .big-square-2,
+.letter-G .big-square-3,
+.letter-G .big-square-4 {
+}
+.letter-G .big-square-5 {
+	left: 1vw;
+}
+.letter-G .big-square-6 {
+	top: -1vw;
+	left: +2vw;
+}
+.letter-G .big-square-7 {
+	top: -3vw;
+	left: +3vw;
+}
+.letter-G .big-square-8 {
+	top: -5vw;
+	left: +3vw;
+}
+.letter-G .big-square-9 {
+	top: -6vw;
+	left: +2vw;
+}
+.letter-G .big-square-10 {
+	top: -9vw;
+	left: +2vw;
+}
+.letter-G .big-square-11 {
+	top: -10vw;
+	left: +3vw;
+}
+
+.letter-I.bis {
+	left: 14vw;
+}
+
+.letter-T {
+	left: 18vw;
+}
+.letter-T .big-square-2,
+.letter-T .big-square-3,
+.letter-T .big-square-4,
+.letter-T .big-square-5 {
+	left: +1.5vw;
+}
+.letter-T .big-square-6 {
+	top: -5vw;
+	left: +1vw;
+}
+.letter-T .big-square-7 {
+	top: -6vw;
+	left: +2vw;
+}
+.letter-T .big-square-8 {
+	top: -7vw;
+	left: +3vw;
+}
+
+.letter-A {
+	left: 22.5vw;
+}
+.letter-A .big-square-1 {
+	left: 1vw;
+}
+.letter-A .big-square-2,
+.letter-A .big-square-3,
+.letter-A .big-square-4,
+.letter-A .big-square-5 {
+}
+.letter-A .big-square-6 {
+	top: -3vw;
+	left: +1vw;
+}
+.letter-A .big-square-7 {
+	top: -4vw;
+	left: +2vw;
+}
+.letter-A .big-square-8 {
+	top: -3vw;
+	left: +3vw;
+}
+.letter-A .big-square-9 {
+	top: -5vw;
+	left: +3vw;
+}
+.letter-A .big-square-10 {
+	top: -7vw;
+	left: +3vw;
+}
+.letter-A .big-square-11 {
+	top: -9vw;
+	left: +3vw;
+}
+.letter-A .big-square-12 {
+	top: -11vw;
+	left: +2vw;
+}
+/* Initial Position */
+.letter-L {
+	left: 27.5vw;
+}
+.letter-L .big-square-1,
+.letter-L .big-square-2,
+.letter-L .big-square-3,
+.letter-L .big-square-4,
+.letter-L .big-square-5 {
+}
+.letter-L .big-square-6 {
+	top: -1vw;
+	left: +1vw;
+}
+.letter-L .big-square-7 {
+	top: -2vw;
+	left: +2vw;
+}
+.letter-L .big-square-8 {
+	top: -3vw;
+	left: +3vw;
+}
+
+/* ANIMATION */
+.big-square,
+.little-square {
+	-webkit-transition: 1.5s cubic-bezier(0.17, 0.67, 0, 1.34);
+	-moz-transition: 1.5s cubic-bezier(0.17, 0.67, 0, 1.34);
+	-o-transition: 1.5s cubic-bezier(0.17, 0.67, 0, 1.34);
+	transition: 1.5s cubic-bezier(0.17, 0.67, 0, 1.34);
+}
+
+.letter-E:hover .little-square {
+	background-color: #d136b5;
+}
+.letter-E:hover .little-square-1 {
+	transform: translate(-1vw, -4vw);
+}
+.letter-E:hover .little-square-2 {
+	transform: translate(-2vw, +3vw);
+}
+.letter-E:hover .little-square-3 {
+	transform: translate(+3vw, -2vw);
+}
+.letter-E:hover .little-square-4 {
+	transform: translate(+4vw, +1vw);
+}
+.letter-E:hover .big-square-1 {
+	transform: translate(-7vw, -7vw);
+}
+.letter-E:hover .big-square-2 {
+	transform: translate(-8vw, -6vw);
+}
+.letter-E:hover .big-square-3 {
+	transform: translate(-9vw, -4vw);
+}
+.letter-E:hover .big-square-4 {
+	transform: translate(-10vw, +3vw);
+}
+.letter-E:hover .big-square-5 {
+	transform: translate(-8vw, +5vw);
+}
+.letter-E:hover .big-square-6 {
+	transform: translate(-6vw, +7vw);
+}
+.letter-E:hover .big-square-7 {
+	transform: translate(-4vw, +6vw);
+}
+.letter-E:hover .big-square-8 {
+	transform: translate(+5vw, +5vw);
+}
+.letter-E:hover .big-square-9 {
+	transform: translate(+7vw, +3vw);
+}
+.letter-E:hover .big-square-10 {
+	transform: translate(+8vw, -4vw);
+}
+.letter-E:hover .big-square-11 {
+	transform: translate(+5vw, -7vw);
+}
+.letter-E:hover .big-square-12 {
+	transform: translate(+3vw, -10vw);
+}
+
+.letter-I:hover .little-square {
+	background-color: orange;
+}
+.letter-I:hover .little-square-1 {
+	transform: translate(-1vw, -4vw);
+}
+.letter-I:hover .little-square-2 {
+	transform: translate(-2vw, +3vw);
+}
+.letter-I:hover .little-square-3 {
+	transform: translate(+3vw, -2vw);
+}
+.letter-I:hover .little-square-4 {
+	transform: translate(+4vw, +1vw);
+}
+.letter-I:hover .big-square-1 {
+	transform: translate(-3vw, -10vw);
+}
+.letter-I:hover .big-square-2 {
+	transform: translate(-5vw, -7vw);
+}
+.letter-I:hover .big-square-3 {
+	transform: translate(-8vw, -4vw);
+}
+.letter-I:hover .big-square-4 {
+	transform: translate(-10vw, +3vw);
+}
+.letter-I:hover .big-square-5 {
+	transform: translate(-8vw, +5vw);
+}
+.letter-I:hover .big-square-6 {
+	transform: translate(-6vw, +7vw);
+}
+.letter-I:hover .big-square-7 {
+	transform: translate(+4vw, -6vw);
+}
+.letter-I:hover .big-square-8 {
+	transform: translate(+9vw, +9vw);
+}
+.letter-I:hover .big-square-9 {
+	transform: translate(+7vw, +3vw);
+}
+
+.letter-G:hover .little-square {
+	background-color: cyan;
+}
+.letter-G:hover .little-square-1 {
+	transform: translate(-1vw, -4vw);
+}
+.letter-G:hover .little-square-2 {
+	transform: translate(-2vw, +3vw);
+}
+.letter-G:hover .little-square-3 {
+	transform: translate(+3vw, -2vw);
+}
+.letter-G:hover .little-square-4 {
+	transform: translate(+4vw, +1vw);
+}
+.letter-G:hover .big-square-1 {
+	transform: translate(-7vw, -7vw);
+}
+.letter-G:hover .big-square-2 {
+	transform: translate(-8vw, -6vw);
+}
+.letter-G:hover .big-square-3 {
+	transform: translate(-9vw, -4vw);
+}
+.letter-G:hover .big-square-4 {
+	transform: translate(-10vw, +3vw);
+}
+.letter-G:hover .big-square-5 {
+	transform: translate(-8vw, +5vw);
+}
+.letter-G:hover .big-square-6 {
+	transform: translate(-6vw, +7vw);
+}
+.letter-G:hover .big-square-7 {
+	transform: translate(-4vw, +6vw);
+}
+.letter-G:hover .big-square-8 {
+	transform: translate(+5vw, +5vw);
+}
+.letter-G:hover .big-square-9 {
+	transform: translate(+7vw, +3vw);
+}
+.letter-G:hover .big-square-10 {
+	transform: translate(+8vw, -4vw);
+}
+.letter-G:hover .big-square-11 {
+	transform: translate(+5vw, -7vw);
+}
+
+.letter-I.bis:hover .little-square {
+	background-color: #b83b3b;
+}
+.letter-I.bis:hover .little-square-1 {
+	transform: translate(1vw, -4vw);
+}
+.letter-I.bis:hover .little-square-2 {
+	transform: translate(-2vw, +3vw);
+}
+.letter-I.bis:hover .little-square-3 {
+	transform: translate(+3vw, -2vw);
+}
+.letter-I.bis:hover .little-square-4 {
+	transform: translate(+4vw, +1vw);
+}
+.letter-I.bis:hover .big-square-1 {
+	transform: translate(-7vw, -7vw);
+}
+.letter-I.bis:hover .big-square-2 {
+	transform: translate(-8vw, -6vw);
+}
+.letter-I.bis:hover .big-square-3 {
+	transform: translate(-9vw, -4vw);
+}
+.letter-I.bis:hover .big-square-4 {
+	transform: translate(-10vw, +3vw);
+}
+.letter-I.bis:hover .big-square-5 {
+	transform: translate(-8vw, +5vw);
+}
+.letter-I.bis:hover .big-square-6 {
+	transform: translate(-6vw, +7vw);
+}
+.letter-I.bis:hover .big-square-7 {
+	transform: translate(+8vw, -4vw);
+}
+.letter-I.bis:hover .big-square-8 {
+	transform: translate(+5vw, -7vw);
+}
+.letter-I.bis:hover .big-square-9 {
+	transform: translate(+3vw, +10vw);
+}
+
+.letter-T:hover .little-square {
+	background-color: #e0d024;
+}
+.letter-T:hover .little-square-1 {
+	transform: translate(-1vw, -4vw);
+}
+.letter-T:hover .little-square-2 {
+	transform: translate(-2vw, +3vw);
+}
+.letter-T:hover .little-square-3 {
+	transform: translate(+3vw, -2vw);
+}
+.letter-T:hover .little-square-4 {
+	transform: translate(+4vw, +1vw);
+}
+.letter-T:hover .big-square-1 {
+	transform: translate(-7vw, -7vw);
+}
+.letter-T:hover .big-square-2 {
+	transform: translate(-8vw, -6vw);
+}
+.letter-T:hover .big-square-3 {
+	transform: translate(-9vw, -4vw);
+}
+.letter-T:hover .big-square-4 {
+	transform: translate(-10vw, +3vw);
+}
+.letter-T:hover .big-square-5 {
+	transform: translate(+8vw, -5vw);
+}
+.letter-T:hover .big-square-6 {
+	transform: translate(+6vw, -7vw);
+}
+.letter-T:hover .big-square-7 {
+	transform: translate(-4vw, +6vw);
+}
+.letter-T:hover .big-square-8 {
+	transform: translate(+5vw, +5vw);
+}
+
+.letter-A:hover .little-square {
+	background-color: #24c729;
+}
+.letter-A:hover .little-square-1 {
+	transform: translate(-1vw, -4vw);
+}
+.letter-A:hover .little-square-2 {
+	transform: translate(-2vw, +3vw);
+}
+.letter-A:hover .little-square-3 {
+	transform: translate(+3vw, -2vw);
+}
+.letter-A:hover .little-square-4 {
+	transform: translate(+4vw, +1vw);
+}
+.letter-A:hover .big-square-1 {
+	transform: translate(-7vw, -7vw);
+}
+.letter-A:hover .big-square-2 {
+	transform: translate(-8vw, -6vw);
+}
+.letter-A:hover .big-square-3 {
+	transform: translate(-9vw, -4vw);
+}
+.letter-A:hover .big-square-4 {
+	transform: translate(-10vw, +3vw);
+}
+.letter-A:hover .big-square-5 {
+	transform: translate(-8vw, +5vw);
+}
+.letter-A:hover .big-square-6 {
+	transform: translate(+6vw, -7vw);
+}
+.letter-A:hover .big-square-7 {
+	transform: translate(-4vw, +6vw);
+}
+.letter-A:hover .big-square-8 {
+	transform: translate(+5vw, +5vw);
+}
+.letter-A:hover .big-square-9 {
+	transform: translate(+7vw, +3vw);
+}
+.letter-A:hover .big-square-10 {
+	transform: translate(+8vw, -4vw);
+}
+.letter-A:hover .big-square-11 {
+	transform: translate(+5vw, -7vw);
+}
+.letter-A:hover .big-square-12 {
+	transform: translate(+3vw, -10vw);
+}
+
+/* LETTER L ==========*/
+.letter-L:hover .little-square {
+	background-color: #3b36d1;
+}
+.letter-L:hover .little-square-1 {
+	transform: translate(-1vw, -4vw);
+}
+.letter-L:hover .little-square-2 {
+	transform: translate(-2vw, +3vw);
+}
+.letter-L:hover .little-square-3 {
+	transform: translate(+3vw, -2vw);
+}
+.letter-L:hover .little-square-4 {
+	transform: translate(+4vw, +1vw);
+}
+.letter-L:hover .big-square-1 {
+	transform: translate(-7vw, -7vw);
+}
+.letter-L:hover .big-square-2 {
+	transform: translate(-8vw, -6vw);
+}
+.letter-L:hover .big-square-3 {
+	transform: translate(-9vw, -4vw);
+}
+.letter-L:hover .big-square-4 {
+	transform: translate(-10vw, +3vw);
+}
+.letter-L:hover .big-square-5 {
+	transform: translate(+8vw, -5vw);
+}
+.letter-L:hover .big-square-6 {
+	transform: translate(+6vw, -7vw);
+}
+.letter-L:hover .big-square-7 {
+	transform: translate(-4vw, +6vw);
+}
+.letter-L:hover .big-square-8 {
+	transform: translate(+5vw, +5vw);
+}
+
+/* LETTER E ================ */
+.letter-E:hover .little-square {
+	background-color: #3b36d1;
+}
+.letter-E:hover .little-square-1 {
+	transform: translate(-1vw, -4vw);
+}
+.letter-E:hover .little-square-2 {
+	transform: translate(-2vw, +3vw);
+}
+.letter-E:hover .little-square-3 {
+	transform: translate(+3vw, -2vw);
+}
+.letter-E:hover .little-square-4 {
+	transform: translate(+4vw, +1vw);
+}
+.letter-E:hover .big-square-1 {
+	transform: translate(-7vw, -7vw);
+}
+.letter-E:hover .big-square-2 {
+	transform: translate(-8vw, -6vw);
+}
+.letter-E:hover .big-square-3 {
+	transform: translate(-9vw, -4vw);
+}
+.letter-E:hover .big-square-4 {
+	transform: translate(-10vw, +3vw);
+}
+.letter-E:hover .big-square-5 {
+	transform: translate(+8vw, -5vw);
+}
+.letter-E:hover .big-square-6 {
+	transform: translate(+6vw, -7vw);
+}
+.letter-E:hover .big-square-7 {
+	transform: translate(-4vw, +6vw);
+}
+.letter-E:hover .big-square-8 {
+	transform: translate(+5vw, +5vw);
 }

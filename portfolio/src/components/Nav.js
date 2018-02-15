@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const Nav = () => (
-  <ul className='nav'>
+  <ul className='navigation'>
     <li><a href="default.asp">Home</a></li>
     <li><a href="news.asp">News</a></li>
     <li><a href="contact.asp">Contact</a></li>
