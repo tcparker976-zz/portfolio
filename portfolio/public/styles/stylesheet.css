@@ -50,10 +50,106 @@ License: none (public domain)
    }
 /* End of reset */
 
-/*Font Face "Comic Book Style" Kits*/
-@import url("../fonts/komika-text/stylesheet.css") screen;
-@import url("../fonts/komika-title/stylesheet.css") screen;
+/* Font Face "Comic Book Style" Kits */
+@font-face {
+    font-family: 'komika_text_tightregular';
+    src: url('KOMTXTT_-webfont.eot');
+    src: url('KOMTXTT_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('KOMTXTT_-webfont.woff2') format('woff2'),
+         url('KOMTXTT_-webfont.woff') format('woff'),
+         url('KOMTXTT_-webfont.ttf') format('truetype'),
+         url('KOMTXTT_-webfont.svg#komika_text_tightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'komika_title_-_kapsregular';
+    src: url('KomikaTitle-Kaps-webfont.eot');
+    src: url('KomikaTitle-Kaps-webfont.eot?#iefix') format('embedded-opentype'),
+         url('KomikaTitle-Kaps-webfont.woff2') format('woff2'),
+         url('KomikaTitle-Kaps-webfont.woff') format('woff'),
+         url('KomikaTitle-Kaps-webfont.ttf') format('truetype'),
+         url('KomikaTitle-Kaps-webfont.svg#komika_title_-_kapsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'komika_axisregular';
+    src: url('KOMIKAX_-webfont.eot');
+    src: url('KOMIKAX_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('KOMIKAX_-webfont.woff2') format('woff2'),
+         url('KOMIKAX_-webfont.woff') format('woff'),
+         url('KOMIKAX_-webfont.ttf') format('truetype'),
+         url('KOMIKAX_-webfont.svg#komika_axisregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* ==== End of Fonts ====== */
+
+body {
+  font-family: 'komika_axisregular', Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
 
 /* IntroContainer */
+.intro-container {
+  padding: 20em 0em 0em 17em
+}
 
-/* ============== */
+/* Wrapper for Intro */
+.text-bubble-wrapper {
+    background-image: url(../assets/cartoon_text_bubble.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 70em;
+    min-width: 60em;
+    align-content: center;
+}
+
+.title-container {  
+  display: grid;
+  max-height: 20em;
+  grid-template-rows: 0em;
+  grid-row-gap: 2em;
+  align-items: center;
+  /* justify-content: space-between */
+}
+
+.title-container h1 {
+  font-size: 480%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.title-container h2 {
+    font-size: 300%;
+    padding-left: 1.5em;
+}
+
+.title-container h3 {
+    font-size: 200%;
+}
+
+.intro-container img {
+  max-height: 225px;
+  max-width: 225px;
+  /* padding-left: 5em; */
+}
+
+/* Title Container */
+/* .title-container {
+  height: 50em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} */
+
+/* About */
+.about-container img {
+    border-radius: 50%;
+}
