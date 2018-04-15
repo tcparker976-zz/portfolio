@@ -52,29 +52,15 @@ License: none (public domain)
 
 /* Font Face "Comic Book Style" Kits */
 @font-face {
-    font-family: 'komika_text_tightregular';
-    src: url('KOMTXTT_-webfont.eot');
-    src: url('KOMTXTT_-webfont.eot?#iefix') format('embedded-opentype'),
-         url('KOMTXTT_-webfont.woff2') format('woff2'),
-         url('KOMTXTT_-webfont.woff') format('woff'),
-         url('KOMTXTT_-webfont.ttf') format('truetype'),
-         url('KOMTXTT_-webfont.svg#komika_text_tightregular') format('svg');
+    font-family: 'komika_textbold';
+    src: url('KOMTXTB_-webfont.eot');
+    src: url('KOMTXTB_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('KOMTXTB_-webfont.woff2') format('woff2'),
+         url('KOMTXTB_-webfont.woff') format('woff'),
+         url('KOMTXTB_-webfont.ttf') format('truetype'),
+         url('KOMTXTB_-webfont.svg#komika_textbold') format('svg');
     font-weight: normal;
     font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'komika_title_-_kapsregular';
-    src: url('KomikaTitle-Kaps-webfont.eot');
-    src: url('KomikaTitle-Kaps-webfont.eot?#iefix') format('embedded-opentype'),
-         url('KomikaTitle-Kaps-webfont.woff2') format('woff2'),
-         url('KomikaTitle-Kaps-webfont.woff') format('woff'),
-         url('KomikaTitle-Kaps-webfont.ttf') format('truetype'),
-         url('KomikaTitle-Kaps-webfont.svg#komika_title_-_kapsregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
 }
 
 @font-face {
@@ -91,65 +77,202 @@ License: none (public domain)
 }
 /* ==== End of Fonts ====== */
 
+/* ==== Initialized Styles ===== */
+* {
+    box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
-  font-family: 'komika_axisregular', Arial, Helvetica, sans-serif;
-  font-size: 1em;
+    background-color: rgb(139, 213, 226);
+    font-family: 'komika_textbold', Arial, Helvetica, sans-serif;
 }
 
-
-/* IntroContainer */
-.intro-container {
-  padding: 20em 0em 0em 17em
+h1, h2, h3 {
+    font-family: 'komika_axisregular', Arial, Helvetica, sans-serif;
 }
 
-/* Wrapper for Intro */
+/* ================== */
+
+/* =================== */
+
+h1 {
+    font-size: 480%;
+}
+
+h2 {
+    font-size: 300%;
+}
+
+h3 {
+    font-size: 200%;
+}
+
+p {
+    font-size: 150%;
+}
+
+a {
+}
+
+/*==== Nav Bar Styles ====*/
+.nav-bar ul {
+    list-style-type: none;
+    margin: auto;
+    padding: auto;
+    overflow: hidden;
+}
+
+.nav-bar li {
+    float: left;
+}
+
+.nav-bar :last-child {
+    float: right;
+}
+
+.nav-bar li a {
+    font-family: 'komika_axisregular', Arial, Helvetica, sans-serif;
+    font-size: 130%;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-bar li a:hover {
+    font-size: 140%;
+}
+
+/*======= Text Bubble Styles ========*/
 .text-bubble-wrapper {
     background-image: url(../assets/cartoon_text_bubble.png);
     background-repeat: no-repeat;
     background-size: contain;
-    min-height: 70em;
-    min-width: 60em;
+    background-position: center;
+    min-height: 200%;
+    min-width: auto;
     align-content: center;
+    padding: 25% 0% 48% 22%;
 }
 
+/*========= Intro Styles ========= */
 .title-container {  
-  display: grid;
-  max-height: 20em;
-  grid-template-rows: 0em;
-  grid-row-gap: 2em;
-  align-items: center;
-  /* justify-content: space-between */
-}
-
-.title-container h1 {
-  font-size: 480%;
-  padding-top: 5px;
-  padding-bottom: 5px;
+    display: grid;
+    grid-row-gap: 2em;
+    align-items: center;
 }
 
 .title-container h2 {
-    font-size: 300%;
-    padding-left: 1.5em;
+    padding-left: 10%;
 }
 
-.title-container h3 {
-    font-size: 200%;
+/*========== About Styles =============*/
+.about-container {
+    display: grid;
+    grid-column-gap: 2em;
+    /* grid-template-columns: 20em 50em; */
+    grid-template-columns: 30% 66%;
+    padding: 0em 0em 0em 1em;
 }
 
-.intro-container img {
-  max-height: 225px;
-  max-width: 225px;
-  /* padding-left: 5em; */
-}
-
-/* Title Container */
-/* .title-container {
-  height: 50em;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-} */
-
-/* About */
 .about-container img {
     border-radius: 50%;
+    border: solid 22px black;
+}
+
+.about-text-container {
+    background-color: white; 
+    border-radius: 21%;
+    border: solid 25px black;
+}
+
+.about-text-container h2 {
+    text-align: center;
+    padding-top: 2%;
+}
+
+.about-text-container p {
+    padding: 2% 4% 0% 4%;
+    text-align: justify;
+    text-indent: 10%;
+    opacity: 0.80;
+}
+
+/*====== Tech Container ==========*/
+.tech-container {
+    overflow: hidden;
+    height: 150%;
+    margin: 4% 0% 0% 0%;
+    background-color: white;
+    border-bottom: solid 25px black;
+    border-top: solid 25px black;
+}
+
+/*====== Logo Container ==========*/
+.logos-container {
+    padding: 1% 0% 0% 0%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 10em;
+}
+
+.logos-container img {
+    display: flex;
+    margin: auto;
+    max-height: 8em;
+    max-width: 10em;
+}
+
+.logos-container div {
+    display: flex;
+    margin: auto;
+}
+
+.logos-container img:hover {
+
+}
+
+.so-much-more {
+    float: right;
+    padding-bottom: 1%; 
+}
+
+/* Projects Styles */
+.projects-container {
+    /* padding-top: 5em; */
+    margin-top: 0em;
+    position: absolute;
+}
+.projects-container h2 {
+    background-image: url(../assets/stand_alone_text_bubble.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 10em;
+    background-position: 1em -2em;
+    background-origin: padding-box;
+    padding: 2em 0em 0em 0em;
+    /* position: absolute; */
+    /* min-height: 10em; */
+}
+.projects-description-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (min-width: 481px){
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px){
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+
 }

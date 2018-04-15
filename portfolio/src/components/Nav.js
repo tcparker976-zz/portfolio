@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Nav = () => (
-  <ul className='navigation'>
-    <li><a href="default.asp">Home</a></li>
-    <li><a href="news.asp">News</a></li>
-    <li><a href="contact.asp">Contact</a></li>
-    <li><a href="about.asp">About</a></li>
+  <ul className='nav-bar'>
+    <li><a href="default.asp">About Me!</a></li>
+    <li><a href="news.asp">Projects!</a></li>
+    <li><a href="about.asp">Resume!</a></li>      
+    <li><a href="contact">Contact!</a></li>
   </ul>
 );
 
