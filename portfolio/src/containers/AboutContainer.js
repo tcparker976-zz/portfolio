@@ -7,5 +7,5 @@ const AboutContainer = () => (
       <About />
     </div>
 );
-// /Users/thomasparker/portfolio/portfolio/public/assets/HR-18.jpg
+
 export default AboutContainer;

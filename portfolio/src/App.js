@@ -14,6 +14,7 @@ const App = () => (
     <AboutContainer />
     <TechContainer />
     <ProjectsContainer />
+    <NavContainer />
   </div>
 )
 
