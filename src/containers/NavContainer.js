@@ -29,7 +29,11 @@ class NavContainer extends Component {
               <a href='https://docs.google.com/document/d/1NfBToVZoC5FtWD_RWVcW0AMDYcU8QDOKVp2LAgoCZTA/edit?usp=sharing'>Resume!</a>
             </button>
           </li>      
-          <li><a href='mailto:parkerthomas976@gmail.com'>Contact!</a></li>
+          <li>
+            <button>
+              <a href='mailto:parkerthomas976@gmail.com'>Contact!</a>
+            </button>  
+          </li>
         </ul>
       </div>
     );
