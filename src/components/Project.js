@@ -6,7 +6,7 @@ const Project = ({ project, index, description, elaboration }) => {
             <div className='project'>
                 <div className='project-video'>
                 <h3>{`${project}!`}</h3>   
-                    <video autoPlay='autoplay' muted='true' onClick={this.play()} preload='none' loop width='600'>
+                    <video autoPlay='autoplay' muted='true' controls="true" preload='none' loop width='600'>
                         <source src={`/assets/projects/${project}_demo.mp4`} type="video/mp4"></source>
                     </video>
                 </div>
@@ -24,7 +24,7 @@ const Project = ({ project, index, description, elaboration }) => {
                 </div>
                 <div className='project-video'>
                 <h3>{`${project}!`}</h3>   
-                    <video autoPlay='autoplay' muted='true' onClick={this.play()} preload='none' loop width='600'>
+                    <video autoPlay='autoplay' muted='true' controls="true" preload='none' loop width='600'>
                         <source src={`/assets/projects/${project}_demo.mp4`} type="video/mp4"></source>
                     </video>
                 </div>
