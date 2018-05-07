@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Project from '../components/Project.js';
+import $ from 'jquery';
 
 class ProjectsContainer extends Component {
     constructor() {
@@ -17,9 +18,23 @@ class ProjectsContainer extends Component {
                 'Information on a fullname is cached on search, and a brief description of the country of origin with geographical location via google maps API is displayed. Built with React, Bootstrap, NodeJS, and MySQL.'
             ]
         }
+
+        this.renderControls = this.renderControls.bind(this);
+    }
+
+    renderControls() {
+        var windowWidth = $(window).width();
+        console.log(windowWidth);
+        if (windowWidth > 601){
+            var videos = document.getElementsByTagName('video') 
+            for (var i = 0; i < videos.length; i++) {
+                videos[i].controls = true
+            }
+        }
     }
 
     render() {
+        this.renderControls();
         return (
 
         <div className='projects-container'>
