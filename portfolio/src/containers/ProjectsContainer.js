@@ -14,7 +14,7 @@ class ProjectsContainer extends Component {
             elaborations: [
                 'Provides users the ability to chat with their friends for the duration of a small battle simulation. Built with React, Express on NodeJS, Socket.io, PassportJS, and PostgreSQL with Sequalize.',
                 'Delivers a brief movie summary, box office ranking, twitter reactions, and links to the searched movie on other aggregator sites. Built with Redux/React, React-Router, Express on NodeJS, and MongoDB.',
-                'Information on a fullname is cached on search, and a brief description of the country of origin with geographical location via google maps API is displayed. Built with React, React-Bootstrap, NodeJS, and MySQL.'
+                'Information on a fullname is cached on search, and a brief description of the country of origin with geographical location via google maps API is displayed. Built with React, Bootstrap, NodeJS, and MySQL.'
             ]
         }
     }
@@ -36,8 +36,9 @@ class ProjectsContainer extends Component {
                     this.state.projects.map((project, index) => {
                         return (
                             <Project 
+                                key={index}
+                                index={index}
                                 project={project} 
-                                index={index} 
                                 description={this.state.descriptions[index]} 
                                 elaboration={this.state.elaborations[index]}
                             />

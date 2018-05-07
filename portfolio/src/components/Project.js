@@ -5,12 +5,12 @@ const Project = ({ project, index, description, elaboration }) => {
         return (
             <div className='project'>
                 <div className='project-video'>
-                    <h3>{`${project}!`}</h3>   
-                    <video autoplay='autoPlay' loop width='600'>
+                <h3>{`${project}!`}</h3>   
+                    <video autoPlay='autoPlay' loop width='600'>
                         <source src={`/assets/projects/${project}_demo.mp4`} type="video/mp4"></source>
                     </video>
                 </div>
-                <div className='project-about-odd'> 
+                <div className='project-about'> 
                     <h4>{description}</h4>
                     <p>{elaboration}</p>
                 </div>
@@ -18,13 +18,13 @@ const Project = ({ project, index, description, elaboration }) => {
     } else {
         return (
             <div className='project'>
-                <div className='project-about-even'>
+                <div className='project-about'>
                     <h4>{description}</h4>
                     <p>{elaboration}</p>
                 </div>
                 <div className='project-video'>
-                    <h3>{`${project}!`}</h3>   
-                    <video autoplay='autoPlay' loop width='600'>
+                <h3>{`${project}!`}</h3>   
+                    <video autoPlay='autoPlay' loop width='600'>
                         <source src={`/assets/projects/${project}_demo.mp4`} type="video/mp4"></source>
                     </video>
                 </div>
