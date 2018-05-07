@@ -18,10 +18,6 @@ class NavContainer extends Component {
     });
   }
 
-  handleContactClick() {
-    
-  }
-
   render() {
     return (
       <div className='nav-container'>
@@ -33,7 +29,7 @@ class NavContainer extends Component {
               <a href='https://docs.google.com/document/d/1NfBToVZoC5FtWD_RWVcW0AMDYcU8QDOKVp2LAgoCZTA/edit?usp=sharing'>Resume!</a>
             </button>
           </li>      
-          <li><button onClick={this.handleContactClick.bind(this)}>Contact!</button></li>
+          <li><a href='mailto:parkerthomas976@gmail.com'>Contact!</a></li>
         </ul>
       </div>
     );
