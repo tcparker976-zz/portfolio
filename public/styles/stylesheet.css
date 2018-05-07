@@ -1,0 +1,556 @@
+@charset "utf-8";
+/* CSS Document */
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+    html, body, div, span, applet, object, iframe,
+   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+   a, abbr, acronym, address, big, cite, code,
+   del, dfn, em, img, ins, kbd, q, s, samp,
+   small, strike, strong, sub, sup, tt, var,
+   b, u, i, center,
+   dl, dt, dd, ol, ul, li,
+   fieldset, form, label, legend,
+   table, caption, tbody, tfoot, thead, tr, th, td,
+   article, aside, canvas, details, embed,
+   figure, figcaption, footer, header, hgroup,
+   menu, nav, output, ruby, section, summary,
+   time, mark, audio, video {
+       margin: 0;
+       padding: 0;
+       border: 0;
+       font-size: 100%;
+       font: inherit;
+       vertical-align: baseline;
+   }
+
+   /* HTML5 display-role reset for older browsers */
+   article, aside, details, figcaption, figure,
+   footer, header, hgroup, menu, nav, section {
+   display: block;
+   }
+   body {
+        line-height: 1;
+   }
+   ol, ul {
+        list-style: none;
+   }
+   blockquote, q {
+        quotes: none;
+   }
+   blockquote:before, blockquote:after,
+   q:before, q:after {
+       content: '';
+       content: none;
+   }
+   table {
+       border-collapse: collapse;
+       border-spacing: 0;
+   }
+/* End of reset */
+
+/* Font Face "Comic Book Style" Kits */
+@font-face {
+    font-family: 'komika_textbold';
+    src: url('KOMTXTB_-webfont.eot');
+    src: url('KOMTXTB_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('KOMTXTB_-webfont.woff2') format('woff2'),
+         url('KOMTXTB_-webfont.woff') format('woff'),
+         url('KOMTXTB_-webfont.ttf') format('truetype'),
+         url('KOMTXTB_-webfont.svg#komika_textbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'komika_axisregular';
+    src: url('KOMIKAX_-webfont.eot');
+    src: url('KOMIKAX_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('KOMIKAX_-webfont.woff2') format('woff2'),
+         url('KOMIKAX_-webfont.woff') format('woff'),
+         url('KOMIKAX_-webfont.ttf') format('truetype'),
+         url('KOMIKAX_-webfont.svg#komika_axisregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* ==== End of Fonts ====== */
+
+/* ==== Initialized Styles ===== */
+* {
+    box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+    background-color: rgb(139, 213, 226);
+    font-family: 'komika_textbold', Arial, Helvetica, sans-serif;
+    /* line-height: 1.6; */
+}
+
+h1, h2, h3, h4 {
+    font-family: 'komika_axisregular', Arial, Helvetica, sans-serif;
+}
+
+button {
+    font-family: 'komika_axisregular', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ================== */
+
+/* =================== */
+
+h1 {
+    font-size: 6vw
+}
+
+h2 {
+    font-size: 4vw;
+}
+
+h3 {
+    font-size: 2.70vw;
+}
+
+h4 {
+    font-size: 1.75vw;
+    line-height: 1.2;
+}
+
+button {
+    font-size: 1.75vw
+}
+
+p {
+    font-size: 1.90vw;
+    opacity: 0.80;
+    line-height: 1.25;
+}
+
+/*==== Nav Bar Styles ====*/
+.nav-bar ul {
+    list-style-type: none;
+    margin: auto;
+    padding: auto;
+    overflow: hidden;
+}
+
+.nav-bar li {
+    float: left;
+}
+
+.nav-bar :last-child {
+    float: right;
+}
+
+.nav-bar li button {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 3% 14px;
+}
+
+.nav-bar li button:hover {
+    font-size: 2vw;
+}
+
+/*======= Text Bubble Styles ========*/
+.text-bubble-wrapper {
+    background-image: url(../assets/cartoon_text_bubble.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    min-height: 200%;
+    min-width: auto;
+    align-content: center;
+    padding: 25% 0% 48% 22%;
+}
+
+/*========= Intro Styles ========= */
+.title-container {  
+    display: grid;
+    grid-row-gap: 2em;
+    align-items: center;
+}
+
+.title-container h2 {
+    padding-left: 10%;
+}
+
+/*========== About Styles =============*/
+.about-container {
+    display: grid;
+    grid-column-gap: 2em;
+    grid-template-columns: 30% 66%;
+}
+
+.my-photo {
+    border-radius: 50%;
+    border: solid 22px black;
+    margin-left: 1em;
+}
+
+.contacts-container {
+    margin-top: .5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 2.75vw;
+}
+
+.contacts-container a {
+    position: relative;
+    margin: auto;
+}
+
+.contact img {
+    height: 5vw;
+}
+
+.about-text-container {
+    background-color:white; 
+    border-radius: 21%;
+    border: solid 25px black;
+    padding: 1% 0% 6% 0%;
+    position: relative;
+    top: -4em;
+    min-height: fit-content; 
+    /* height: 113vh; */
+}
+
+.about-text-container h2 {
+    text-align: center;
+}
+
+.about-text-container p {
+    padding: 2% 7% 1% 7%;
+    text-align: start;
+    text-indent: 5%;
+}
+
+/*====== Tech Container ==========*/
+.tech-container {
+    /* height: 78vh; */
+    background-color: white;
+    border-bottom: solid 25px black;
+    border-top: solid 25px black;
+}
+
+/*====== Logo Container ==========*/
+.logos-container {
+    padding: 3vw 0vw 0vw 0vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 6vw;
+    grid-row-gap: 1.5em;
+    min-height: 19.5vh;
+}
+
+.logos-container img {
+    display: flex;
+    margin: auto;
+    max-height: 13vw;
+    max-width: 13vw;
+}
+
+.logos-container div {
+    display: flex;
+    margin: auto;
+}
+
+.so-much-more {
+    margin-left: 51vw;
+    padding-bottom: 1vw;
+}
+
+/*===== Projects Styles ========*/
+.projects-container {
+    padding-top: 1.3vw;
+}
+
+.projects-title-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2vw;
+    background-image: url(../assets/stand_alone_text_bubble.png);
+    background-repeat: no-repeat;
+    background-size: 56vw;
+    background-position: 25.5vw 1vw;
+    min-height: 43.6vw;
+    z-index: -1;
+    
+}
+
+.projects-title-container img {
+    position: relative;
+    max-height: 41vw;
+    left: 8vw;
+    bottom: 2vw;
+    z-index: -1;
+}
+
+.projects-title {
+    display: grid;
+    margin: auto;
+    grid-row-gap: .7vw;
+    transform: rotate(-3deg);
+    text-align: center;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 41vw;
+}
+
+.project-video {
+    display: grid;
+    grid-row-gap: 0.5vw;
+    margin: auto;
+    text-align: center;
+}
+
+.project video {
+    border-radius: 10%;
+    border: solid 16px black;
+    min-width: 48vw
+    
+}
+
+.project-about:nth-child(even) {
+    display: grid;
+    min-height: 40vw;
+    background-size: 48vw; 
+    background-position: 0vw -2vw;
+    background-repeat: no-repeat;
+    background-image: url(../assets/much_rounder_text_bubble_flipped.png);
+    text-align: center;
+    padding: 9vw;
+}
+
+.project-about:nth-child(odd) {
+    display: grid;
+    min-height: 40vw;
+    background-size: 48vw; 
+    background-position: 1vw -2vw;
+    background-repeat: no-repeat;
+    background-image: url(../assets/much_rounder_text_bubble.png);
+    text-align: center;
+    padding: 9vw;
+}
+
+.project-about p {
+  position: relative;
+  bottom: 4vw;
+}
+
+.project-about h4 {
+    position: relative;
+    bottom: 3vw;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1110px) {
+    .project-about:nth-child(even) {
+        display: grid;
+        min-height: 40vw;
+        background-size: 48vw; 
+        background-position: 0.5vw -2vw;
+        background-repeat: no-repeat;
+        background-image: url(../assets/much_rounder_text_bubble_flipped.png);
+        text-align: center;
+        padding: 9vw;
+    }
+
+    .project-about:nth-child(odd) {
+        display: grid;
+        min-height: 40vw;
+        background-size: 48vw; 
+        background-position: 1vw -2vw;
+        background-repeat: no-repeat;
+        background-image: url(../assets/much_rounder_text_bubble.png);
+        text-align: center;
+        padding: 9vw;
+    }
+
+    .project video {
+        border: solid .75em black;
+        max-width: 48vw
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+    .nav-bar {
+        display: none;
+    }
+
+        /*======= Text Bubble Styles ========*/
+    .text-bubble-wrapper {
+        background-image: url(../assets/stand_alone_text_bubble.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 5.5vw 4vw;
+        align-content: center;
+        padding: 26% 0% 34% 22%;
+    }
+
+    /*========= Intro Styles ========= */
+    .title-container {  
+        grid-row-gap: 1em;
+    }
+    
+    /*========== About Styles =============*/
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .my-photo-container {
+        grid-template-rows: 1fr 10vw;
+        margin: auto;
+    }
+
+    .my-photo {
+        border: solid 18px black;
+        margin-left: 0em;
+        height: 80vw;
+    }
+
+    .contacts-container {
+        margin-top: 0vw;
+        margin-left: 0vw;
+    }
+
+    .contact img {
+        height: 8vw;
+    }
+
+    .about-text-container {
+        border: solid 18px black;
+        margin: 0% 4% 0% 4%;
+        top: 0em;
+        border-radius: 15%;
+    }
+
+    .about-text-container p {
+        font-size: 115%;
+    }
+
+    .about-text-container h2 {
+        font-size: 120%;
+    }
+
+    /*====== Tech Container ==========*/
+    .tech-container {
+        margin-top: 1.5em;
+        border-bottom: solid 18px black;
+        border-top: solid 18px black;
+    }
+
+    /*====== Logo Container ==========*/
+    .logos-container {
+        padding: 1vw 0vw 0vw 0vw;
+    }
+
+    /*===== Projects Styles ========*/
+    .projects-container {
+        padding-top: 1.3vw;
+    }
+
+    .projects-title-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 2vw;
+        background-image: url(../assets/stand_alone_text_bubble.png);
+        background-repeat: no-repeat;
+        background-size: 56vw;
+        background-position: 25.5vw 1vw;
+        min-height: 43.6vw;
+        z-index: -1;
+        
+    }
+
+    .projects-title-container img {
+        position: relative;
+        max-height: 41vw;
+        left: 8vw;
+        bottom: 2vw;
+        z-index: -1;
+    }
+
+    .projects-title {
+        display: grid;
+        margin: auto;
+        grid-row-gap: .7vw;
+        transform: rotate(-3deg);
+        text-align: center;
+    }
+
+    .project {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr;
+        grid-row-gap: 2vw;
+        min-height: 41vw;
+        padding-bottom: 3vw;
+    }
+
+    .project-video {
+        display: grid;
+        grid-row-gap: 0.5vw;
+        text-align: center;
+        order: 1;
+    }
+
+    .project video {
+        border-radius: 10%;
+        max-width: 90vw;
+        border: solid .75em black;
+    }
+    
+    .project-about {
+        background-color: white;
+        border-radius: 50%;
+        order: 2;
+        border: solid .5em black;
+    }
+
+    .project-about:nth-child(even) {
+        background-image: none;
+    }
+    
+    .project-about:nth-child(odd) {
+        background-image: none;
+    }
+    
+    .project-about p {
+        position: relative;
+        bottom: 0vw;
+        font-size: 115%;
+    }
+
+    .project h3 {
+        font-size: 120%;
+        padding: 3vw 0vw 1vw 0vw;
+        text-align: center;
+    }
+    
+    .project-about h4 {
+        padding-top: 1.5vh;
+        position: relative;
+        bottom: 0.5vh;
+        font-size: 95%;
+    }
+
+}
