@@ -55,7 +55,6 @@ License: none (public domain)
     font-family: 'komika_textbold';
     src: url('KOMTXTB_-webfont.eot');
     src: url('KOMTXTB_-webfont.eot?#iefix') format('embedded-opentype'),
-         url('KOMTXTB_-webfont.woff2') format('woff2'),
          url('KOMTXTB_-webfont.woff') format('woff'),
          url('KOMTXTB_-webfont.ttf') format('truetype'),
          url('KOMTXTB_-webfont.svg#komika_textbold') format('svg');
@@ -67,7 +66,6 @@ License: none (public domain)
     font-family: 'komika_axisregular';
     src: url('KOMIKAX_-webfont.eot');
     src: url('KOMIKAX_-webfont.eot?#iefix') format('embedded-opentype'),
-         url('KOMIKAX_-webfont.woff2') format('woff2'),
          url('KOMIKAX_-webfont.woff') format('woff'),
          url('KOMIKAX_-webfont.ttf') format('truetype'),
          url('KOMIKAX_-webfont.svg#komika_axisregular') format('svg');
@@ -161,7 +159,7 @@ p {
     display: block;
     color: black;
     text-align: center;
-    padding: 3% 14px;
+    padding: 3% 13px;
 }
 
 .nav-bar li button:hover {
