@@ -5,7 +5,7 @@ class ProjectsContainer extends Component {
     constructor() {
         super();
         this.state = {
-            projects: ['chattermon', 'marsklif', 'namin'],
+            projects: ['chattermon', 'marsklif', 'namein'],
             descriptions: [       
                 'A Pokémon battle simulator, with integrated chat!', 
                 'Analysis and box office data on over 18,000 movies!', 
